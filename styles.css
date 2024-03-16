@@ -1,0 +1,66 @@
+:root {
+  --base-color: #37517e;
+}
+.front {
+  background-color: var(--base-color);
+}
+.t-image {
+  filter: grayscale(100%);
+  transition: all 0.3s ease-in-out;
+}
+.anim {
+  animation: anime 2s linear infinite alternate;
+  /* display: block; */
+  margin: auto;
+}
+.t-image:hover{
+  filter: grayscale(0);
+  scale: 1.1;
+}
+.abt{
+  color: var(--base-color);
+}
+.black{
+position: relative;
+background-color: black
+;
+width: 100px;
+margin: auto;
+height: 2px;
+}
+.blue{
+  position: absolute;
+  background-color: blue;
+  height: 2.5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 50px;
+
+}
+@keyframes anime {
+  
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+@media only screen and (max-width: 768px){
+  .landing {
+    flex-direction:column-reverse;
+    height: 95vh;
+    margin-top: 40px;
+  }
+  .anim{
+animation: none;
+  }
+  .landing-btn{
+    margin-bottom: 35px;
+  }
+  .t-image{
+    display: block;
+    margin: auto  ;
+  }
+}
